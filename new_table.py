@@ -19,10 +19,11 @@ class New_table:
             # Создаем курсор для выполнения операций с базой данных.
             self.cursor = self.connection.cursor()
             # Пишем запрос SQL
-            create_table_query = '''CREATE TABLE avto
-                                                  (ID INT PRIMARY KEY     NOT NULL,
-                                                  MODEL           TEXT    NOT NULL,
-                                                  PRICE         REAL); '''
+            create_table_query = '''CREATE TABLE test_den
+                                                  ("ID" INT PRIMARY KEY,
+                                                  "user "          text,
+                                                  "name"           text,
+                                                  "password" integer); '''
             # Выполнение команды: это создает новую таблицу
             self.cursor.execute(create_table_query)
             self.connection.commit()
