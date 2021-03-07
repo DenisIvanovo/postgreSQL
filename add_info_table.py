@@ -15,7 +15,7 @@ try:
     cursor = connection.cursor()
     for i in range(3):
         insert_query = """ INSERT INTO Users ("user", "name", "phote", "email", "password")
-                                  VALUES ( 'd', 'denis','89997307022','md@mail.ru', 3432423)"""
+                                  VALUES ( 'd', 'denis','89992','md@mail.ru', 3432423)"""
 
         # Выполнение команды: это создает новую таблицу
         cursor.execute(insert_query)
