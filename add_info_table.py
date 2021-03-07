@@ -14,13 +14,13 @@ try:
     print('Мы удачно подключились к базе данных.')
     cursor = connection.cursor()
     for i in range(3):
-        insert_query = """ INSERT INTO Users ("user", "name", "phote", "email", "password")
+        insert_query = """ INSERT INTO Users ("user", "name", "telephone", "email", "password")
                                   VALUES ( 'd', 'denis','89992','md@mail.ru', 3432423)"""
 
-        # Выполнение команды: это создает новую таблицу
+        # Выполнение команды: добавляем данные
         cursor.execute(insert_query)
         connection.commit()
-        print("Данные внесены в базу")
+        print("Данные занесены в базу данных")
 
 except (Exception, Error) as error:
     print("Ошибка при работе с PostgreSQL", error)
