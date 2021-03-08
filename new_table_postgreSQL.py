@@ -16,10 +16,21 @@ try:
     # Создаем курсор для выполнения операцийй с базой данных.
     cursor = connection.cursor()
     # Пишем запрос SQL
-    create_table_query = '''CREATE TABLE mobile
-                              (ID INT PRIMARY KEY     NOT NULL,
-                              MODEL           TEXT    NOT NULL,
-                              PRICE         REAL); '''
+    create_table_query = ''' create table data (
+	                                                    "id" bigserial PRIMARY KEY ,
+	                                                    "first_name" VARCHAR(50) NOT NULL ,
+	                                                    "last_name" VARCHAR(50) NOT NULL,
+	                                                    "phone" VARCHAR(20) NOT NULL,
+	                                                    "email" VARCHAR(50),
+	                                                    "gender" VARCHAR(6) NOT NULL,
+	                                                    "job" VARCHAR(50) NOT NULL,
+	                                                    "A_country" VARCHAR(50) NOT NULL,
+	                                                    "сity" VARCHAR(50) NOT NULL,
+	                                                    "Currency" VARCHAR(50)NOT NULL,
+	                                                    "money" VARCHAR(10) NOT NULL,
+	                                                    "date_of_birth" DATE,
+	                                                    "credit_card" VARCHAR(20) NOT NULL
+                                                        );'''
     # Выполнение команды: это создает новую таблицу
     cursor.execute(create_table_query)
     connection.commit()
